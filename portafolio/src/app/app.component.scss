@@ -1,0 +1,53 @@
+.conteiner {
+  min-height: 100vh;
+  background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .card {
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.26);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(0px);
+
+    height: 80vh;
+    width: 75%;
+    border-radius: 2rem;
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.circle {
+  height: 30vh;
+  width: 30vh;
+  position: absolute;
+  right: 40px;
+  top: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.26);
+  backdrop-filter: blur(0px);
+
+  z-index: 0;
+}
+
+.circle-2{
+    top: auto;
+    bottom: 10px;
+    left: 40px;
+}
+
+
+
+@media screen and (max-width: 320px) {
+  .card{
+      width: 100%!important;
+  }
+}
