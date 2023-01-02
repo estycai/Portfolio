@@ -1,0 +1,89 @@
+.sidebar-conteiner {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.55);
+  height: 100%;
+  width: 45vh;
+  border-top-left-radius: 34px;
+  border-bottom-left-radius: 34px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  .sidebar-info {
+    text-align: center;
+
+    h2 {
+      font-size: 24px;
+    }
+
+    h6 {
+      font-size: 12px;
+      padding-top: 5px;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+}
+
+
+.sidebar-list {
+  text-decoration: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  ul {
+    list-style: none;
+
+    li {
+      margin-top: 20px;
+
+      a {
+        font-size: 18px;
+        text-decoration: none;
+        color: black;
+        font-weight: 600;
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.sidebar-button {
+  position: relative;
+  
+  button {
+    padding: 10px 20px;
+    background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    
+    span {
+      font-size: 16px;
+      margin-left: 5px;
+      font-weight: 700;
+    }
+
+    fa-icon{
+      font-size: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .sidebar-conteiner{
+      display: none;
+  }
+}
