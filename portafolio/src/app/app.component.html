@@ -1,13 +1,26 @@
 <div class="conteiner">
-  <div class="card">
+  <div class="card" *ngIf="!isMobile">
     <app-sidebar></app-sidebar>
     <div class="content">
       <!-- <canvas #canvas id="canvas" style="height: 100%; width: 100%;"></canvas> -->
-      <div id="canvasContainer">
+      <!-- <div id="canvasContainer">
         <canvas id="myCanvas" style="height: 100%; width: 100%;"></canvas>
-      </div>
+      </div> -->
+      <router-outlet></router-outlet>
     </div>
   </div>
+
+  <div class="card-mobile" *ngIf="isMobile">
+    <div class="content-mobile">
+      <!-- <canvas #canvas id="canvas" style="height: 100%; width: 100%;"></canvas> -->
+      <!-- <div id="canvasContainer">
+        <canvas id="myCanvas" style="height: 100%; width: 100%;"></canvas>
+      </div> -->
+      <router-outlet></router-outlet>
+    </div>
+    <app-sidebar></app-sidebar>
+  </div>
+
   <div class="circle"></div>
   <div class="circle circle-2"></div>
 </div>

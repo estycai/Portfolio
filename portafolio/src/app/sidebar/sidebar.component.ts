@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { faCircleArrowDown, faUser, faUserGraduate, faCode, faBriefcase } from '@fortawesome/free-solid-svg-icons';
 
+import { SharedService } from 'src/services/shared.service';
+
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
@@ -12,10 +14,13 @@ export class SidebarComponent implements OnInit {
   faUserGraduate= faUserGraduate;
   faCode = faCode;
   faBriefcase=faBriefcase;
-  
-  constructor() { }
+
+  isMobile!: boolean;
+
+  constructor(private sharedService: SharedService){ }
 
   ngOnInit(): void {
+    this.sharedService.isMobile().subscribe(x => {this.isMobile = x.matches});
   }
 
 }

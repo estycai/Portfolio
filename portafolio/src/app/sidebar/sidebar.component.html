@@ -1,4 +1,4 @@
-<div class="sidebar-conteiner">
+<div class="sidebar-conteiner" *ngIf="!isMobile">
   <div class="sidebar-info">
     <img src="assets/img/yo.png" alt="Estoy facha. No?" style="width: 80px;">
     <h2>Esteban Barone</h2>
@@ -9,19 +9,19 @@
     <ul>
       <li>
         <fa-icon [icon]="faUser"></fa-icon>
-        <a href="">Sobre Mi</a>
+        <a routerLink="/about">Sobre Mi</a>
       </li>
       <li>
         <fa-icon [icon]="faBriefcase"></fa-icon>
-        <a href="">Experencia</a>
+        <a routerLink="/experience">Experencia</a>
       </li>
       <li>
         <fa-icon [icon]="faUserGraduate"></fa-icon>
-        <a href="">Educacion</a>
+        <a routerLink="/education">Educacion</a>
       </li>
       <li>
         <fa-icon [icon]="faCode"></fa-icon>
-        <a href="">Habilidades</a>
+        <a routerLink="/skills">Habilidades</a>
       </li>
     </ul>
   </div>
@@ -32,4 +32,31 @@
       <span>Descargar CV</span>
     </button>
   </div>
+</div>
+
+<div *ngIf="isMobile" class="sidebar-conteiner-mobile">
+  <!-- <div class="sidebar-list-mobile"> -->
+    <ul>
+      <li routerLink="/">
+        <i class="material-symbols-outlined">home</i>
+        <!-- <a routerLink="/about">Sobre Mi</a> -->
+      </li>
+      <li routerLink="/about">
+        <i class="material-symbols-outlined">person</i>
+        <!-- <a routerLink="/about">Sobre Mi</a> -->
+      </li>
+      <li routerLink="/experience">
+        <i class="material-symbols-outlined">work</i>
+        <!-- <a routerLink="/experience">Experencia</a> -->
+      </li>
+      <li routerLink="/education">
+        <i class="material-symbols-outlined">school</i>
+        <!-- <a routerLink="/education">Educacion</a> -->
+      </li>
+      <li routerLink="/skills">
+        <i class="material-symbols-outlined">code</i>
+        <!-- <a routerLink="/skills">Habilidades</a> -->
+      </li>
+    </ul>
+  <!-- </div> -->
 </div>

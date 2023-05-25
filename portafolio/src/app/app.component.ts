@@ -6,6 +6,7 @@ import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass';
 import { ShaderPass } from 'three/examples/jsm/postprocessing/ShaderPass';
 import { FXAAShader } from 'three/examples/jsm/shaders/FXAAShader';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { SharedService } from 'src/services/shared.service';
 
 
 
@@ -15,10 +16,17 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
+  isMobile! :boolean;
+  title = 'portafolio';
 
   mixer!: THREE.AnimationMixer;
 
+  constructor(private sharedService: SharedService) {
+  }
+
   ngOnInit(){
+    this.sharedService.isMobile().subscribe(x => {this.isMobile = x.matches});
+
     const canvas = document.getElementById('myCanvas') as HTMLCanvasElement;
  // Configurar el renderizador con canal alfa
  const renderer = new THREE.WebGLRenderer({
@@ -55,12 +63,12 @@ loader.load('assets/img/scene.gltf', (gltf) => {
     if (animations && animations.length > 0) {
       // Crear un mezclador de animaciones
       const mixer = new THREE.AnimationMixer(avatar);
-  
+
       // Activar la primera animación
       const action = mixer.clipAction(animations[0]);
       action.play();
     }
-  
+
 
   // Ajustar la posición, escala o rotación de tu avatar según sea necesario
   avatar.position.set(0, 0, 0);
@@ -86,8 +94,8 @@ loader.load('assets/img/scene.gltf', (gltf) => {
   }
   animate();
 });
-  
+
   }
-  
-  title = 'portafolio';
+
+
 }
