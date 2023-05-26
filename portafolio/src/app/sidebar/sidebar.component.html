@@ -1,26 +1,26 @@
 <div class="sidebar-conteiner" *ngIf="!isMobile">
   <div class="sidebar-info">
-    <img src="assets/img/yo.png" alt="Estoy facha. No?" style="width: 80px;">
-    <h2>Esteban Barone</h2>
+    <img src="assets/img/yo.png" alt="Estoy facha. No?" style="width: 100px;">
+    <h1>Esteban Barone</h1>
     <h6>FullStack Developer en <a href="http://www.circostudio.com/" _BLANK>Circo Studio</a></h6>
   </div>
 
   <div class="sidebar-list">
     <ul>
       <li>
-        <fa-icon [icon]="faUser"></fa-icon>
+        <i class="material-symbols-outlined">person</i>
         <a routerLink="/about">Sobre Mi</a>
       </li>
       <li>
-        <fa-icon [icon]="faBriefcase"></fa-icon>
+        <i class="material-symbols-outlined">work</i>
         <a routerLink="/experience">Experencia</a>
       </li>
       <li>
-        <fa-icon [icon]="faUserGraduate"></fa-icon>
+        <i class="material-symbols-outlined">school</i>
         <a routerLink="/education">Educacion</a>
       </li>
       <li>
-        <fa-icon [icon]="faCode"></fa-icon>
+        <i class="material-symbols-outlined">code</i>
         <a routerLink="/skills">Habilidades</a>
       </li>
     </ul>
@@ -28,7 +28,7 @@
 
   <div class="sidebar-button">
     <button>
-      <fa-icon [icon]="faCircleArrowDown"></fa-icon>
+      <i class="material-symbols-outlined" style="font-size: 40px; font-weight: 600;">arrow_downward</i>
       <span>Descargar CV</span>
     </button>
   </div>
