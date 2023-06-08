@@ -1,0 +1,15 @@
+.skill-card{
+    background: rgba(255, 255, 255, 0.65);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 20px;
+
+    .img{
+        margin: 20px;
+        img{
+            width: 6vh;
+        }
+    }
+}
