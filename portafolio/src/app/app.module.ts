@@ -13,6 +13,8 @@ import { EducationComponent } from './pages/education/education.component';
 import { HomeComponent } from './pages/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedService } from 'src/services/shared.service';
+import { TitleComponent } from './shared/title/title.component';
+import { SkillCardComponent } from './pages/skills/skill-card/skill-card.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { SharedService } from 'src/services/shared.service';
     ExperienceComponent,
     SkillsComponent,
     EducationComponent,
-    HomeComponent
+    HomeComponent,
+    TitleComponent,
+    SkillCardComponent
   ],
   imports: [
     BrowserModule,
