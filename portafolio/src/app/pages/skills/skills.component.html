@@ -1,7 +1,12 @@
 <app-title [title]="'Habilidades'"></app-title>
 
 <section>
+    <div class="buscador">
+        <mat-form-field class="example-full-width">
+            <input matInput (keyup)="busquedaRapida()" [(ngModel)]="txtBusquedaRapida">
+          </mat-form-field>
+    </div>
     <div class="skills-conteiner">
-        <app-skill-card *ngFor="let skill of habilidades" [habilidad]="skill"></app-skill-card>
+        <app-skill-card *ngFor="let skill of habilidadesAux" [habilidad]="skill"></app-skill-card>
     </div>
 </section>

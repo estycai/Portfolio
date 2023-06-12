@@ -16,6 +16,8 @@ import { SharedService } from 'src/services/shared.service';
 import { TitleComponent } from './shared/title/title.component';
 import { SkillCardComponent } from './pages/skills/skill-card/skill-card.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import {MatInputModule} from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     AppRoutingModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatInputModule,
+    FormsModule
   ],
   providers: [SharedService],
   bootstrap: [AppComponent]

@@ -9,6 +9,7 @@ import { Skill } from '../skills.component';
 export class SkillCardComponent implements OnInit {
   @Input() habilidad!: Skill;
 
+
   constructor() { }
 
   ngOnInit(): void {
