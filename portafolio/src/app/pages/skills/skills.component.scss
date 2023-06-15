@@ -1,3 +1,19 @@
+section{
+	.buscador{
+		width: 100%;
+
+		input{
+			border: none;
+			padding: 10px 20px;
+			background: rgba(255, 255, 255, 0.55);
+			border-radius: 20px;
+			width: 100%;
+			margin-bottom: 5vh;
+		}
+	}
+}
+
+
 .skills-conteiner{
     overflow-y: scroll;
     height: 60vh;
